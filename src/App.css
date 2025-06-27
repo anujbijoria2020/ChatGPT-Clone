@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+}
+
+body {
+  background: rgb(3, 0, 31);
+  color: white;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  flex: 3;
+  border-right: 1px solid rgb(100, 100, 100);
+  padding: 1rem;
+}
+
+.main {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Sidebar content */
+.logo {
+  margin-right: 1rem;
+}
+
+.brand {
+  font-size: 2rem;
+}
+
+.upperside {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+.uppersideTop {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+}
+
+.midbtn {
+  background: #5a4bff;
+  border: none;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.addbtn {
+  height: 2rem;
+  padding-right: 1rem;
+}
+
+.query {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(98, 98, 98, 1);
+  color: rgba(222, 222, 222, 1);
+  width: 90%;
+  height: 4.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.query > img {
+  margin-right: 1.2rem;
+  height: 1.75rem;
+}
+
+.lowerside {
+  padding: 2rem 1rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.listItemsImg {
+  margin-right: 1.5rem;
+}
+
+/* Main area */
+.chats {
+  width: 100%;
+  max-width: 70rem;
+  overflow-y: auto;
+  height: calc(100vh - 20rem);
+  scrollbar-width: none;
+}
+
+.chat {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.chatImg {
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+}
+
+.bot {
+  background: rgba(28, 30, 58, 1);
+  border-radius: 0.5rem;
+}
+
+.chatFooter {
+  margin-top: auto;
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  background: rgba(28, 30, 58, 1);
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.input > input {
+  flex: 1;
+  padding: 1.2rem;
+  color: white;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.sendBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.chatFooter > .info {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+@media (max-width: 992px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    flex: none;
+  }
+
+  .main {
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .query {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .chatFooter {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  .query {
+    font-size: 1.2rem;
+    height: auto;
+  }
+
+  .chat {
+    font-size: 1.2rem;
+    flex-direction: column;
+  }
+
+  .chatImg {
+    margin-bottom: 0.5rem;
+  }
+}
